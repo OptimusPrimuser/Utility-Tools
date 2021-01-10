@@ -1,0 +1,156 @@
+<html>
+   <head>
+       <link rel='stylesheet' href='style.css'>
+       <script type='text/javascript' src='/eel.js'></script>
+       <script type='text/javascript' src='main.js'></script>
+    </head> 
+    <body>
+
+        <div id='content'>
+            <div id="img" class='image'>
+                <input type='button' value="Image Editor" onclick='showImgB()'>
+            </div>
+
+            <br>
+            
+            <div id="renamer">
+                <input type='button' value="Renamer" onclick='showRenamerB()'>
+            </div>
+
+            <br>
+
+            <div id="diretory">
+                <input type='button' value="Directory Singler" onclick='showDirectoryB()'>
+            </div>
+        </div>
+
+        <!-- IMAGES -->
+        <div id="imgMenu" class="sideMenu">
+
+            <div id="imgMenuContent" >
+                <input type='button' id='imgBack' onclick="hideImgB()" value="X" class="backButton">
+                <label for="inputFolder">Input Folder</label>
+                <input type='text' id="inputFolder">
+                <br><br>
+
+                <label for="outputFolder">
+                    Output Folder
+                </label>
+                <input type='text'  id="outputFolder" >
+                <br><br>
+                Effects<br>
+                <span class='radios'>
+                    <input type='radio' value="sepia" id='1'>
+                    <label for='1' >Sepia</label><br>
+                </span>
+                
+                <span class='radios'>
+                    <input type='radio' value="brightness" id='2'>
+                    <label for='2' >Brightness</label><br>
+                </span>
+    
+                <span class='radios'>
+                    <input type='radio' value="saturation" id='3'>
+                        <label for='3' >Saturation</label><br>
+                </span>
+                
+                <span class='radios'>
+                    <input type='radio' value="sharpness" id='4'>    
+                    <label for='4' >Sharpness</label><br>
+                </span>
+                
+                
+                <span class='radios'>
+                    <input type='radio' value="warm" id='5'>
+                    <label for='5' >Warm</label><br>
+                </span>
+                
+                
+                <span class='radios'>
+                    <input type='radio' value="cold" id='6'>
+                    <label for='6' >Cold</label><br>
+                </span>
+
+                <span class='radios'>
+                    <input type='radio' value="equalise" id='7'>
+                    <label for='7' >Equalise</label><br>
+                </span>
+                
+                <span class='radios'>
+                    <input type='radio' value="cartoon" id='8'>
+                    <label for='8' >Cartoon</label><br><br>
+                </span>
+                
+
+                <input type="range" min="1" max="100" value="95" class="slider" id="quality">
+                <br> <br>
+
+                <input type="button" class="buttonClic" value="Add Effects" onclick="addEffects()"><br> <br>
+                <input type="button" class="buttonClic" value="Clear Effects" onclick="clearEffects()"> <br> 
+                <br>
+                <textarea id="applied" name="applied" rows="10" ></textarea><br> <br>
+                <input type="button" class="buttonClic" value="Apply" onclick="applyEffects()">
+            </div>
+        </div>
+
+        <!-- Renamer -->
+        <div id="renamerMenu" class="sideMenu">
+            <div id="renamerMenuContent">
+                <input type='button' id='renamerBack' onclick="hideRenamerB()" value="X" class="backButton">
+                <label for="folder">Folder</label>
+                <input type='text' id="folder">
+                <br><br>
+
+                <label for="prefix">
+                    Prefix
+                </label>
+                <input type='text'  id="prefix">
+                <br><br>
+
+                <label for="suffix">
+                    Suffix
+                </label>
+                <input type='text'  id="suffix">
+
+                <br><br>
+                <span class='radios'>
+                    <input type='radio' value="noSpace" id='noSpace'>
+                    <label for='noSpace' >No Space</label><br>
+                </span>
+                <br>
+                <input type="button" class="buttonClic" value="Clear" onclick="clearEffects()"> <br> <br> 
+                <input type="button" class="buttonClic" value="Apply" onclick="renaming()">
+            </div>
+        </div>
+
+        <!-- Directory Menu -->
+        <div id="directoryMenu" class="sideMenu">
+            <div id="directoryMenuContent">
+                <input type='button' id='directoryBack' onclick="hideDirectoryB()" value="X" class="backButton">
+                <label for="inputDirectory">Input Directory</label>
+                <input type='text' id="inputDirectory">
+                <br><br>
+
+                <label for="outputDirectory">Output Directory</label>
+                <input type='text' id="outputDirectory">
+                <br><br>
+
+            
+                <span class='radios'>
+                    <input type='radio' value="move" id='move'>
+                    <label for='move' >Move(default Copy)</label><br>
+                </span>
+                <br>
+                <span class='radios'>
+                    <input type='radio' value="fSuffix" id='fSuffix'>
+                    <label for='fSuffix' >Folder Suffix</label><br>
+                </span>
+                <br>
+                <input type="button" class="buttonClic" value="Clear" onclick="clearEffects()"> <br> <br> 
+                <input type="button" class="buttonClic" value="Apply" onclick="singler()">
+            </div>
+        </div>
+        
+    </body> 
+
+</html>

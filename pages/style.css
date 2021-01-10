@@ -1,0 +1,206 @@
+*{
+  box-sizing: border-box;
+  outline-style: none;
+}
+body
+{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(-45deg,rgba(100, 66, 255, 0.9),rgba(0, 108, 255, 0.9), rgba(12, 180, 206, 0.9));
+	background-size: 400% 400%;
+  animation: gradient;
+  animation-duration:10s;
+  animation-delay: 1s;
+  animation-timing-function:ease ;
+  animation-iteration-count:infinite;
+    /* background-image:-webkit-radial-gradient(left top, circle cover, rgba(100, 66, 255, 0.9) 15%, rgba(0, 108, 255, 0.9) 50%, rgba(12, 180, 206, 0.9) 85%); */ /* radial-gradient(left top, circle cover, rgba(100, 66, 255, 0.9), rgba(0, 108, 255, 0.9), rgba(12, 180, 206, 0.9)); */
+    /* transition-property: all;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+    transition-delay: 0.1s; */
+    /*linear-gradient(blue,green);*//* radial-gradient(left top, circle cover, rgba(100, 66, 255, 0.9) 15%, rgba(0, 108, 255, 0.9) 50%, rgba(12, 180, 206, 0.9), 85%);
+ */}
+ @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/* body:hover
+{
+
+  background-image:-webkit-radial-gradient(left top, circle cover, rgba(100, 66, 255, 0.9) random(100), rgba(0, 108, 255, 0.9) random(100), rgba(12, 180, 206, 0.9) random(100));
+} */
+#content
+{
+    margin: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: transparent;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    /* visibility: hidden; */
+}
+
+.backButton
+{
+    position: fixed;
+    background: transparent;
+    border: 0 solid;
+    height:50px;
+    width:50px;
+    border-radius: 50%;
+    background: rgb(114, 206, 236);
+    color: white;
+    top:0;
+    left:0;
+    margin: 5%;
+}
+
+#imgMenu
+{
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  animation-play-state: paused;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+
+#renamerMenu
+{
+    /* position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    background-color:red; */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+
+
+#directoryMenu
+{
+    /* position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 50%;
+    height: 100%;
+    background-color:red; */
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 0%;
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    animation-play-state: paused;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.sideMenu
+{
+  border: 0px solid;
+  border-radius: 0% 50% 50% 0%;
+  background:white;
+}
+#content input[type='button']
+{
+  transition-property: all;
+  transition-duration: 0.5s;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+  border: 10px solid transparent;
+  font-size:100%;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#content input[type='button']:hover
+{
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transform: scale(1.2, 1.2);
+}
+
+input[type='text']
+{
+  border: 1px solid;
+  box-sizing: border-box;
+  border-radius: 10px;
+  background:transparent;
+  padding: 5px;
+
+}
+
+input[type='radio']:checked+label
+{
+  background-color:rgba(140, 236, 220, 0.9);
+  
+}
+
+input[type='text']:focus,textarea:focus
+{
+  background: rgba(140, 236, 220, 0.9);
+}
+
+@keyframes appear{
+    0% {
+        width: 0%;
+        opacity: 0%;
+        visibility: hidden;
+      /* visibility: hidden; */
+    }
+    100% {
+        width: 50%;
+        opacity: 100%;
+      visibility: visible;
+      
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes disappear{
+    0% {
+        width: 50%;
+        opacity: 100%;
+      visibility: visible;
+      /* visibility: hidden; */
+    }
+    100% {
+        width: 0%;
+        opacity: 0%;
+        visibility: hidden;
+      
+      animation-play-state: paused;
+    }
+  }
+
